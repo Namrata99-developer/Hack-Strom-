@@ -1,16 +1,45 @@
-# React + Vite
+# 🚙 Off-Road Semantic Segmentation: Optimized Pipeline
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-Optimized-ee4c2c)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Currently, two official plugins are available:
+This repository contains a robust, end-to-end training and inference pipeline for off-road semantic segmentation. It serves as a stronger replacement for standard starter scripts, resolving critical data and architectural bugs to maximize performance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Core Improvements over Baseline
 
-## React Compiler
+Our pipeline addresses several critical issues found in the provided starter code:
+* **Correct Class Handling:** Uses the correct 10 classes defined in the dataset documentation, specifically retaining the `Flowers (600)` class which was previously dropped by label bugs.
+* **Preserved Mask Integrity:** Implements safe resizing logic to avoid corrupting segmentation masks during preprocessing.
+* **Full Architecture Training:** Trains the complete segmentation model end-to-end, rather than isolating and training only a small prediction head.
+* **Accurate Output Formatting:** Saves proper validation and test predictions in raw label IDs for exact evaluation matching.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📊 Dataset & Metrics Insights
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> **Important Metric Note:** `0.80` mean IoU is *not* the same thing as `80%` pixel accuracy.
+> * **IoU** (Intersection over Union) represents class overlap: `TP / (TP + FP + FN)`.
+> * **mIoU** averages classes more fairly than raw pixel accuracy, ensuring that rare classes heavily impact the score. For example, sky and landscape might look perfect, while flowers or logs fail completely.
+
+### Real Data Analysis
+* **Initial Baseline:** The starter baseline provided by Duality achieved `0.2478` mIoU.
+* **Class Imbalance:** `Logs` are extremely rare in both the train and validation splits.
+* **Test Split Variance:** The local test split contains only a subset of the total classes, meaning local test IoU and hidden-test IoU may differ significantly.
+
+---
+
+## 📂 Directory Structure
+
+Point `dataset.root_dir` in your configuration file to the main folder containing the dataset. The expected structure is:
+
+```text
+├── train/
+│   ├── Color_Images/
+│   └── Segmentation/
+├── val/
+│   ├── Color_Images/
+│   └── Segmentation/
+└── Offroad_Segmentation_testImages/
+    ├── Color_Images/
+    └── Segmentation/
