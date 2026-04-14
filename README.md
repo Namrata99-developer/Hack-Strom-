@@ -18,10 +18,10 @@ Our pipeline addresses several critical issues found in the provided starter cod
 
 ## 📊 Our Updated Code Results
 
-> **VALIDATION IOU SCORE:** 0.6905
-> **TEST IOU SCORE:** 0.3108
+* **VALIDATION IOU SCORE:** 0.6905
+* **TEST IOU SCORE:** 0.3108
 
-> **MODEL USED:** DeeplabV3+ with Restnet101 and Imagenet(Pretrained Model) 
+* **MODEL USED:** DeeplabV3+ with Restnet101 and Imagenet(Pretrained Model) 
 ---
 
 ---
