@@ -1,0 +1,17 @@
+{
+  "images_benchmarked": 307,
+  "latency_ms_mean": 1213.035508824674,
+  "latency_ms_median": 1239.185776499994,
+  "latency_ms_p90": 1256.3602574999777,
+  "latency_ms_p95": 1279.5266790000142,
+  "latency_ms_min": 1009.003588999974,
+  "latency_ms_max": 1322.961388500005,
+  "fps_mean": 0.8243781758449207,
+  "split": "val",
+  "input_dir": "/content/drive/MyDrive/BP Hackathon/val",
+  "checkpoint": "/content/drive/MyDrive/BP Hackathon/winning_solution_v3/outputs/exp3_final_last_run/best.ckpt",
+  "device": "cuda",
+  "tta_used": true,
+  "warmup_batches": 5,
+  "max_batches": 0
+}

@@ -1,0 +1,17 @@
+{
+  "images_benchmarked": 992,
+  "latency_ms_mean": 1097.2460512248038,
+  "latency_ms_median": 1100.43881925003,
+  "latency_ms_p90": 1105.6897414999867,
+  "latency_ms_p95": 1108.4074290000672,
+  "latency_ms_min": 986.1221085000125,
+  "latency_ms_max": 1130.131428000027,
+  "fps_mean": 0.91137261226299,
+  "split": "test",
+  "input_dir": "/content/drive/MyDrive/BP Hackathon/Offroad_Segmentation_testImages",
+  "checkpoint": "/content/drive/MyDrive/BP Hackathon/winning_solution_v3/outputs/exp3_final_last_run/best.ckpt",
+  "device": "cuda",
+  "tta_used": true,
+  "warmup_batches": 5,
+  "max_batches": 0
+}

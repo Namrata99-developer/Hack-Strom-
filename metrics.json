@@ -1,0 +1,18 @@
+{
+  "split": "test",
+  "checkpoint": "/content/drive/MyDrive/BP Hackathon/winning_solution_v3/outputs/exp3_final_last_run/best.ckpt",
+  "mean_iou": 0.31315561702659317,
+  "pixel_accuracy": 0.6686977453272468,
+  "per_class_iou": [
+    0.4715947394372459,
+    0.0006347183406003984,
+    0.4792630058977918,
+    0.4799043801449833,
+    0.0,
+    0.0,
+    0.0,
+    0.04900375393033215,
+    0.6670063981353223,
+    0.9841491743796559
+  ]
+}
