@@ -16,6 +16,16 @@ Our pipeline addresses several critical issues found in the provided starter cod
 
 ---
 
+## 📊 Our Updated Code Results
+
+> **VALIDATION IOU SCORE:** 0.6905
+> **TEST IOU SCORE:** 0.3108
+
+> **MODEL USED:** DeeplabV3+ with Restnet101 and Imagenet(Pretrained Model) 
+---
+
+---
+
 ## 📊 Dataset & Metrics Insights
 
 > **Important Metric Note:** `0.80` mean IoU is *not* the same thing as `80%` pixel accuracy.
